@@ -24,5 +24,5 @@ Dependency Injection: Get
 Design Patterns: MVC
 
 ## Login info
-# Email: Nayemacademic14@gmail.com
-# Password: Nayem123
+#### Email: Nayemacademic14@gmail.com
+#### Password: Nayem123
