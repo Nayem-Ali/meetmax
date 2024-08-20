@@ -11,9 +11,9 @@ A new Flutter project.
 5. Test App: flutter test
 
 ## Assumption
-1. User credentials are stored as asset json file
+1. User credentials and post data are stored as asset json file
 2. GetStorage used for holding user info such as email, name and auth_staus
-3. The design is strictly followed based on the provided Figma file, with placeholder images and text where necessary.
+3. The design is mostly followed based on the provided Figma file, with placeholder images and text where necessary.
 4. Local JSON files are read but write/update/delete operation isn't present in the app
 
 ## Tools
