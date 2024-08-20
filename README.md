@@ -22,3 +22,7 @@ Languages: Dart
 State Management: GetxController + Reactive/Observable
 Dependency Injection: Get
 Design Patterns: MVC
+
+## Login info
+# Email: Nayemacademic14@gmail.com
+# Password: Nayem123
