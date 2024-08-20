@@ -4,11 +4,11 @@ A new Flutter project.
 
 ## Getting Started
 
-Clone Repository: https://github.com/Nayem-Ali/meetmax.git
-Navigate to the project directory: cd meetmax
-Install Packages: flutter pub get
-Run App: flutter run
-Test App: flutter test
+1. Clone Repository: https://github.com/Nayem-Ali/meetmax.git
+2. Navigate to the project directory: cd meetmax
+3. Install Packages: flutter pub get
+4. Run App: flutter run
+5. Test App: flutter test
 
 ## Assumption
 1. User credentials are stored as asset json file
