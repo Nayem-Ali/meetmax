@@ -1,25 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meetmax/business_logic/controllers/auth_controller.dart';
 import 'package:meetmax/constant/app_colors.dart';
 import 'package:meetmax/constant/app_regex.dart';
 import 'package:meetmax/constant/app_strings.dart';
 import 'package:meetmax/ui/route/app_route.dart';
-import 'package:meetmax/ui/widgets/auth_app_bar.dart';
-import 'package:meetmax/ui/widgets/custom_form_field.dart';
-import 'package:meetmax/ui/widgets/custom_txt_styles.dart';
-import 'package:meetmax/ui/widgets/custome_elevated_button.dart';
-import 'package:meetmax/ui/widgets/icon_labeled_button.dart';
-import 'package:meetmax/ui/widgets/or_widget.dart';
+import 'package:meetmax/ui/style/app_styles.dart';
+import 'package:meetmax/ui/widgets/auth_widgets/auth_app_bar.dart';
+import 'package:meetmax/ui/widgets/shared_widgets/boxDecotation.dart';
+import 'package:meetmax/ui/widgets/shared_widgets/custom_form_field.dart';
+import 'package:meetmax/ui/widgets/shared_widgets/custom_txt_styles.dart';
+import 'package:meetmax/ui/widgets/shared_widgets/custome_elevated_button.dart';
+import 'package:meetmax/ui/widgets/shared_widgets/icon_labeled_button.dart';
+import 'package:meetmax/ui/widgets/auth_widgets/or_widget.dart';
 
 class SignInScreen extends StatelessWidget {
   SignInScreen({Key? key}) : super(key: key);
 
   final _formKey = GlobalKey<FormState>();
 
-  final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
-  RxBool isRemember = false.obs;
+  // final localStorage = GetStorage();
+
+  final _authController = Get.find<AuthController>();
+
+  final _emailController = TextEditingController(text: GetStorage().read("email"));
+  final _passwordController = TextEditingController(text: GetStorage().read("password"));
+  final RxBool _isRemember = false.obs;
+
+  Future<void> signInFunction() async {
+    if (_formKey.currentState!.validate()) {
+      // AppStyles().progressDialog(context);
+      Map<String, dynamic> response = await _authController.signIn(
+        _emailController.text.trim(),
+        _passwordController.text.trim(),
+        _isRemember.value,
+      );
+
+      if (response["status"] == "success") {
+        Get.toNamed(navigation);
+        Get.showSnackbar(AppStyles().successMessage(response["message"]));
+      } else {
+        Get.showSnackbar(AppStyles().failedMessage(response["message"]));
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,10 +83,7 @@ class SignInScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 2),
                 margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(1),
-                  borderRadius: BorderRadius.circular(10),
-                ),
+                decoration: boxDecoration(),
                 child: Form(
                   key: _formKey,
                   child: Column(
@@ -104,10 +127,10 @@ class SignInScreen extends StatelessWidget {
                         children: [
                           Obx(
                             () => Checkbox(
-                              value: isRemember.value,
+                              value: _isRemember.value,
                               activeColor: AppColors.blueColor,
                               onChanged: (val) {
-                                isRemember.value = val!;
+                                _isRemember.value = val!;
                               },
                             ),
                           ),
@@ -121,22 +144,16 @@ class SignInScreen extends StatelessWidget {
                           )
                         ],
                       ),
-                      SizedBox(
-                        width: Get.width * 0.8,
+                      Container(
+                        width: Get.width,
+                        padding: const EdgeInsets.all(8.0),
                         child: customElevatedButton(
                           "Sign In",
-                          () {
-                            if(_formKey.currentState!.validate()){
-
-                            }
-                          },
+                          signInFunction,
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0,
-                          vertical: 18,
-                        ),
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
                         child: GestureDetector(
                           onTap: () {
                             Get.offNamed(signUp);

@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "name": "Nayem Ali",
+      "email": "nayemacademic14@gmail.com",
+      "uid": "1",
+      "dob": "20-08-1999",
+      "gender": "male",
+      "password": "Nayem123",
+      "photo": "assets/images/Profile.png"
+    },
+    {
+      "name": "Rahim Uddin",
+      "email": "rahim.uddin@gmail.com",
+      "uid": "2",
+      "dob": "15-07-1985",
+      "gender": "male",
+      "password": "Rahim123",
+      "photo": "assets/images/ProfileRahim.png"
+    },
+    {
+      "name": "Fatema Begum",
+      "email": "fatema.begum@gmail.com",
+      "uid": "3",
+      "dob": "22-12-1992",
+      "gender": "female",
+      "password": "Fatema123",
+      "photo": "assets/images/ProfileFatema.png"
+    },
+    {
+      "name": "Ayesha Siddique",
+      "email": "ayesha.siddique@gmail.com",
+      "uid": "4",
+      "dob": "01-01-2000",
+      "gender": "female",
+      "password": "Ayesha123",
+      "photo": "assets/images/ProfileAyesha.png"
+    },
+    {
+      "name": "Tanvir Hossain",
+      "email": "tanvir.hossain@gmail.com",
+      "uid": "5",
+      "dob": "19-05-1995",
+      "gender": "male",
+      "password": "Tanvir123",
+      "photo": "assets/images/ProfileTanvir.png"
+    }
+  ]
+}

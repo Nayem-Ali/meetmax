@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:meetmax/ui/widgets/custom_txt_styles.dart';
+import 'package:meetmax/ui/widgets/shared_widgets/custom_txt_styles.dart';
 
-import '../../constant/app_colors.dart';
-import '../../constant/app_strings.dart';
+import '../../../constant/app_colors.dart';
+import '../../../constant/app_strings.dart';
 
 List<String> languages = ["English (UK)", "English (USA)", "English (AUS)"];
 RxString onSelect = languages[0].obs;

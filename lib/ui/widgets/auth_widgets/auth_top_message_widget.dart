@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'custom_txt_styles.dart';
+import '../shared_widgets/custom_txt_styles.dart';
 
 class TopMessage extends StatelessWidget {
   const TopMessage({
