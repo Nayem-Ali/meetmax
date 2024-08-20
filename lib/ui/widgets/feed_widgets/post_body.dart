@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:meetmax/business_logic/controllers/post_controller.dart';
-import 'package:meetmax/ui/widgets/feed_widgets/comment_options.dart';
+import 'package:meetmax/ui/widgets/feed_widgets/comment_form.dart';
 import 'package:meetmax/ui/widgets/feed_widgets/comments_reply_tree.dart';
 import 'package:meetmax/ui/widgets/feed_widgets/post_footer.dart';
 import 'package:meetmax/ui/widgets/feed_widgets/post_header.dart';
-import 'package:meetmax/ui/widgets/feed_widgets/post_options.dart';
+import 'package:meetmax/ui/widgets/feed_widgets/recent_events.dart';
 
 import '../../../constant/app_colors.dart';
 
 import '../shared_widgets/boxDecotation.dart';
 import '../shared_widgets/custom_txt_styles.dart';
-import 'staggered_gird_view.dart';
+import 'activity_options.dart';
+import 'media_gird_view.dart';
 
-class PostView extends StatelessWidget {
+class PostBody extends StatelessWidget {
   // final Post postData;
-  PostView({Key? key}) : super(key: key);
+  PostBody({Key? key}) : super(key: key);
   final _postController = Get.find<PostController>();
   int k = 0;
   String getTime(String date) {
@@ -70,10 +71,12 @@ class PostView extends StatelessWidget {
                       postData.share!,
                     ),
                     Container(color: AppColors.grayColor.withOpacity(0.5), height: 2),
-                    postOptions(),
+                    activityOptions(postData.id),
                     Container(color: AppColors.grayColor.withOpacity(0.5), height: 2),
-                    commentOption(),
-                    if (postData.comments!.isNotEmpty) postComment(postData.comments!),
+                    commentForm(postData.id),
+                    if (postData.comments!.isNotEmpty) commentReplyTree(postData.comments!),
+                    if(postData == snapshot.data!.first)
+                      RecentEvents()
                   ],
                 ),
               );

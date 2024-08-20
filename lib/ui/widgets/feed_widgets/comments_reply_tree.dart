@@ -16,7 +16,7 @@ String getTime(String date) {
   return time <= 24 ? "${time}h." : "${time ~/ 24}d.";
 }
 
-Widget postComment(List<PostComment> comments) {
+Widget commentReplyTree(List<PostComment> comments) {
   return Container(
     height: 150.h,
     color: AppColors.grayColor.withOpacity(0.1),

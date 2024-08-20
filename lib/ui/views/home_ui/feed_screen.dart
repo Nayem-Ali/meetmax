@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:meetmax/business_logic/controllers/post_controller.dart';
 import 'package:meetmax/ui/widgets/feed_widgets/birthdays.dart';
-import 'package:meetmax/ui/widgets/feed_widgets/post_creation.dart';
-import 'package:meetmax/ui/widgets/feed_widgets/post_view.dart';
+import 'package:meetmax/ui/widgets/feed_widgets/post_body.dart';
 import 'package:meetmax/ui/widgets/feed_widgets/story_head.dart';
+
+import '../../widgets/feed_widgets/add_post.dart';
 
 
 class FeedScreen extends StatelessWidget {
@@ -15,8 +14,8 @@ class FeedScreen extends StatelessWidget {
       child: Column(
         children: [
           const StoryHead(),
-          const PostCreation(),
-          PostView(),
+          const AddPost(),
+          PostBody(),
           Birthday()
         ],
       ),

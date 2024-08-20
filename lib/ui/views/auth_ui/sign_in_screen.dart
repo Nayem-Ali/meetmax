@@ -39,7 +39,7 @@ class SignInScreen extends StatelessWidget {
       );
 
       if (response["status"] == "success") {
-        Get.toNamed(navigation);
+        Get.offAllNamed(navigation);
         Get.showSnackbar(AppStyles().successMessage(response["message"]));
       } else {
         Get.showSnackbar(AppStyles().failedMessage(response["message"]));

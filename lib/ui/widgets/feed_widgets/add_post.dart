@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:meetmax/ui/widgets/feed_widgets/post_form.dart';
 
 import '../../../constant/app_colors.dart';
 import '../../../constant/app_strings.dart';
@@ -8,10 +9,10 @@ import '../shared_widgets/boxDecotation.dart';
 import '../shared_widgets/custom_txt_button.dart';
 import '../shared_widgets/custom_txt_styles.dart';
 import '../shared_widgets/custome_elevated_button.dart';
-import 'my_post.dart';
 
-class PostCreation extends StatelessWidget {
-  const PostCreation({Key? key}) : super(key: key);
+
+class AddPost extends StatelessWidget {
+  const AddPost({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class PostCreation extends StatelessWidget {
                   Get.bottomSheet(
                     backgroundColor: Colors.transparent,
                     isScrollControlled: true,
-                    const MyPost(),
+                    PostForm(),
                   );
                 },
                 child: Container(

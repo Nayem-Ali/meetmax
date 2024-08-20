@@ -44,7 +44,7 @@ class SignUpScreen extends StatelessWidget {
 
       Map<String, dynamic> response = await _authController.signUp(user);
       if (response["status"] == "success") {
-        Get.offNamed(navigation);
+        Get.offAllNamed(navigation);
         Get.showSnackbar(AppStyles().successMessage(response["message"]));
       } else {
         Get.showSnackbar(AppStyles().failedMessage(response["message"]));

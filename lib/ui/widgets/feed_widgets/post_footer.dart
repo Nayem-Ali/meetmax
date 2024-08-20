@@ -40,9 +40,11 @@ Widget postFooter(List likes, int comments, int share) {
                     borderRadius: BorderRadius.circular(15),
                     color: AppColors.grayColor,
                   ),
-                  child: customizedText(
-                    "+${likes.length > 10 ? 9 : likes.length- 3}",
-                    color: Colors.white,
+                  child: Center(
+                    child: customizedText(
+                      "+${likes.length > 10 ? 9 : likes.length- 3}",
+                      color: Colors.white, fontSize: 14,
+                    ),
                   ),
                 );
               }

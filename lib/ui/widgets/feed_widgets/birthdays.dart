@@ -7,6 +7,7 @@ import 'package:meetmax/constant/app_strings.dart';
 import 'package:meetmax/data/users.dart';
 import 'package:meetmax/ui/widgets/shared_widgets/boxDecotation.dart';
 import 'package:meetmax/ui/widgets/shared_widgets/custom_txt_styles.dart';
+import 'event_data.dart';
 
 class Birthday extends StatelessWidget {
   Birthday({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class Birthday extends StatelessWidget {
         children: [
           Row(
             children: [
-              customizedText("Birthdays"),
+              customizedText("Birthdays", fontWeight: FontWeight.bold),
               const Spacer(),
               TextButton(
                 onPressed: () {},
@@ -38,6 +39,7 @@ class Birthday extends StatelessWidget {
             future: userData.getUsers(),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
+                /// For testing set first user birthdate as today
                 snapshot.data![0].dob = DateFormat("dd-MM-yyyy").format(DateTime.now());
                 return Column(
                   children: snapshot.data!.map((user) {
@@ -60,6 +62,7 @@ class Birthday extends StatelessWidget {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
+                                        /// User Name
                                         customizedText(user.name),
                                         customizedText(
                                           "Birthday Today",
@@ -144,36 +147,12 @@ class Birthday extends StatelessWidget {
           ),
           InkWell(
             onTap: () {},
-            child: Container(
-              padding: const EdgeInsets.all(10),
-              margin: const EdgeInsets.symmetric(vertical: 8),
-              decoration: BoxDecoration(
-                color: AppColors.grayColor.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                    padding: const EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      color: AppColors.yellowColor.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Image.asset(AppIconPath.birthdayIcon, scale: 2.5),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      customizedText("Upcoming Birthdays", fontSize: 14),
-                      customizedText(
-                        "See 4 have upcoming birthdays",
-                        fontSize: 12,
-                      ),
-                    ],
-                  )
-                ],
-              ),
+            child: eventData(
+              AppColors.yellowColor,
+              AppIconPath.birthdayIcon,
+              "Upcoming birthdays",
+              "See 4 more have upcoming birthday",
+              []
             ),
           )
         ],

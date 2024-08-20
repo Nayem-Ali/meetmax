@@ -21,7 +21,7 @@ class PostMediaGridView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(4.0),
-            child: Image.asset(media[index], scale: 2,),
+            child: Image.asset(media[index], scale: 0.7,),
           );
         },
       ),
