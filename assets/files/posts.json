@@ -1,0 +1,197 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "Nayem Ali",
+      "avatar": "assets/images/Profile.png",
+      "time": "17-08-2024 8:15 PM",
+      "visibility": "Public",
+      "caption": "",
+      "media": [
+        "assets/images/Image.png"
+      ],
+      "likes": [
+        "Rahim Uddin",
+        "Ayesha Siddiqeu",
+        "Fatema Begum",
+        "Tanvir Hossain"
+      ],
+      "comments": [
+        {
+          "name": "Tanvir Hossain",
+          "avatar": "assets/images/ProfileTanvir.png",
+          "time": "17-08-2024 8:45 PM",
+          "text": "Looking Nice",
+          "media": [],
+          "reply": [
+            {
+              "name": "Nayem Ali",
+              "avatar": "assets/images/Profile.png",
+              "time": "17-08-2024 9:15 PM",
+              "text": "Thanks",
+              "media": [],
+              "reply": []
+            }
+          ]
+        },
+        {
+          "name": "Rahim Ahmed",
+          "avatar": "assets/images/ProfileRahim.png",
+          "time": "17-08-2024 8:25 PM",
+          "text": "Tremendous",
+          "media": [],
+          "reply": [
+            {
+              "name": "Nayem Ali",
+              "avatar": "assets/images/Profile.png",
+              "time": "17-08-2024 8:15 PM",
+              "text": "Thank you very much",
+              "media": [],
+              "reply": []
+            }
+          ]
+        }
+      ],
+      "share": 17
+    },
+    {
+      "id": 2,
+      "author": "Ayesha Siddiqeu",
+      "avatar": "assets/images/ProfileAyesha.png",
+      "time": "10-08-2024 9:00 PM",
+      "visibility": "Public",
+      "caption": "If you think adventure is dangerous, try routine, it’s lethal Paulo Coelho! Good morning all friends.",
+      "media": [
+        "assets/images/Post2.png",
+        "assets/images/Post.png",
+        "assets/images/Post1.png"
+      ],
+      "likes": [
+        "Nayem Ali",
+        "Fatema Begum",
+        "Tanvir Hossain",
+        "Rahim Uddin"
+      ],
+      "comments": [
+        {
+          "name": "Fatema Begum",
+          "avatar": "assets/images/ProfileFatema.png",
+          "time": "17-08-2024 8:15 PM",
+          "text": "That book is on my reading list!",
+          "media": [],
+          "reply": [
+            {
+              "name": "Ayesha Siddiqeu",
+              "avatar": "assets/images/ProfileAyesha.png",
+              "time": "17-08-2024 8:15 PM",
+              "text": "You should definitely read it, it’s great!",
+              "media": [],
+              "reply": []
+            }
+          ]
+        }
+      ],
+      "share": 10
+    },
+    {
+      "id": 1,
+      "author": "Fatema Begum",
+      "avatar": "assets/images/ProfileFatema.png",
+      "time": "13-08-2024 7:30 AM",
+      "visibility": "Public",
+      "caption": "Morning workout done!",
+      "media": [
+      ],
+      "likes": [
+        "Nayem Ali",
+        "Rahim Uddin",
+        "Tanvir Hossain"
+      ],
+      "comments": [
+        {
+          "name": "Tanvir Hossain",
+          "avatar": "assets/images/ProfileTanvir.png",
+          "time": "17-08-2024 8:15 PM",
+          "text": "Great job!",
+          "media": [],
+          "reply": [
+            {
+              "name": "Fatema Begum",
+              "avatar": "assets/images/ProfileFatema.png",
+              "time": "17-08-2024 8:15 PM",
+              "text": "Thanks! Feeling energized!",
+              "media": [],
+              "reply": []
+            }
+          ]
+        }
+      ],
+      "share": 5
+    },
+    {
+      "id": 4,
+      "author": "Rahim Uddin",
+      "avatar": "assets/images/ProfileRahim.png",
+      "time": "13-08-2024 11:45 AM",
+      "visibility": "Public",
+      "caption": "Exploring the city!",
+      "media": [
+      ],
+      "likes": [
+        "Nayem Ali",
+        "Ayesha Siddiqeu",
+        "Fatema Begum",
+        "Tanvir Hossain"
+      ],
+      "comments": [
+        {
+          "name": "Nayem Ali",
+          "avatar": "assets/images/Profile.png",
+          "time": "17-08-2024 8:15 PM",
+          "text": "Looks like a lot of fun!",
+          "media": [],
+          "reply": []
+        }
+      ],
+      "share": 12
+    },
+    {
+      "id": 5,
+      "author": "Tanvir Hossain",
+      "avatar": "assets/images/ProfileTanvir.png",
+      "time": "13-08-2024 3:20 PM",
+      "visibility": "Public",
+      "caption": "Had a good time at this new place.",
+      "media": [
+        "assets/images/Post.png"
+      ],
+      "likes": [
+        "Ayesha Siddiqeu",
+        "Fatema Begum",
+        "Rahim Uddin"
+      ],
+      "comments": [
+        {
+          "name": "Fatema Begum",
+          "avatar": "assets/images/ProfileFatema.png",
+          "time": "17-08-2024 8:15 PM",
+          "text": "That looks amazing! Where is it?",
+          "media": [
+
+          ],
+          "reply": [
+            {
+              "name": "Tanvir Hossain",
+              "avatar": "assets/images/ProfileTanvir.png",
+              "time": "17-08-2024 8:15 PM",
+              "text": "It's called Café Delight. You should check it out!",
+              "media": [],
+              "reply": []
+            }
+          ]
+        }
+      ],
+      "share": 8
+    }
+  ]
+}

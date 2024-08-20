@@ -5,7 +5,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:meetmax/ui/route/app_route.dart';
 import 'package:meetmax/ui/theme/app_theme.dart';
 
-Future<void> main() async{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme().lightTheme(context),
           themeMode: ThemeMode.light,
           getPages: getPages,
-          initialRoute: signIn,
+          initialRoute: GetStorage().read("auth_status") != null ? navigation : signIn,
           unknownRoute: getPages.first,
         );
       },

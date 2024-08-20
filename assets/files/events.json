@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "title": "Graduation Ceremony",
+      "description": "The graduation ceremony is also sometimes called",
+      "icon": "assets/icons/graduation.png",
+      "seen": [
+        "assets/images/ProfileAyesha.png",
+        "assets/images/ProfileFatema.png",
+        "assets/images/ProfileTanvir.png",
+        "assets/images/Profile.png",
+        "assets/images/Profile.png",
+        "assets/images/Profile.png",
+        "assets/images/Profile.png",
+        "assets/images/Profile.png"
+      ]
+    },
+    {
+      "title": "Photography Ideas",
+      "description": "Reflections. Reflections work because they can create",
+      "icon": "assets/icons/photography.png",
+      "seen": [
+        "assets/images/Profile.png",
+        "assets/images/ProfileTanvir.png",
+        "assets/images/ProfileAyesha.png",
+        "assets/images/ProfileFatema.png",
+        "assets/images/ProfileTanvir.png",
+        "assets/images/ProfileFatema.png",
+        "assets/images/Profile.png",
+        "assets/images/Profile.png",
+        "assets/images/Profile.png",
+        "assets/images/Profile.png"
+      ]
+    }
+  ]
+}

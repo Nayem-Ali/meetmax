@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:meetmax/constant/app_colors.dart';
 import 'package:meetmax/constant/app_strings.dart';
 
-RxBool obscureTxt = false.obs;
+RxBool obscureTxt = true.obs;
 String eyeOn = AppIconPath.eyeOnIcon;
 String eyeOff = AppIconPath.eyeOffIcon;
 
@@ -16,10 +17,14 @@ TextFormField customTextField(
   return TextFormField(
     controller: controller,
     validator: validationFunction,
-    obscureText: obscureTxt.value,
+    obscureText: obscureTxt.value && isSuffix,
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.symmetric(horizontal: 1, vertical: 1),
-      border: const OutlineInputBorder(),
+      border: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: AppColors.grayColor.withOpacity(0.2),
+        ),
+      ),
       prefixIcon: Image.asset(iconPath, scale: 3),
       hintText: hintTxt,
       suffixIcon: isSuffix

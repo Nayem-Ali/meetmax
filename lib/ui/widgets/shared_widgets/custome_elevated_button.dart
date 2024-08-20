@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../constant/app_colors.dart';
+import '../../../constant/app_colors.dart';
 import 'custom_txt_styles.dart';
 
-ElevatedButton customElevatedButton(buttonName, onPressed) {
+ElevatedButton customElevatedButton(buttonName, onPressed, {double fontSize=16}) {
   return ElevatedButton(
     onPressed: onPressed,
     style: ElevatedButton.styleFrom(
@@ -14,6 +14,7 @@ ElevatedButton customElevatedButton(buttonName, onPressed) {
     child: customizedText(
       buttonName,
       color: Colors.white,
+      fontSize: fontSize,
     ),
   );
 }
